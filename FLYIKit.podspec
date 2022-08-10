@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
 
   # 框架的名字
-  spec.name         = "FLYKìt"
+  spec.name         = "FLYIKit"
   
   # 当前版本（注意，是当前版本，假如后续更新了新版本，需要修改此处，以后打的tag，保持和versin一致）
   spec.version      = "0.0.1"

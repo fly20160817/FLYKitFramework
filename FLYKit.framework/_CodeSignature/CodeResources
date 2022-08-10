@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/FLYKit-Swift.h</key>
 		<data>
-		cy7E+kBMPl+cEnM/06VDfJqMHgU=
+		Xxla95EAMJblc9K7940jhmkVDwA=
 		</data>
 		<key>Headers/FLYKit.h</key>
 		<data>
@@ -186,19 +186,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/HXF4smVJILA53IsULw7OaMqFwo=
+		K5aRvkoX01FZ96Age4VD3I29jmo=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		ZUvCniq92eFPna9GRMTu51y1Q7Y=
+		BN4sow7W+IwBz/kt4rdf83++pJs=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		fwQfPEd/E/2SQSK8FubELftbQ0c=
+		3FuVoV89c//we2RJ7BUCaTfWpeo=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		I5hY1NKJRR20A7RkmsZL47igjZY=
+		76BwMz2i18F86ejCUOCG54X2d5M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -332,11 +332,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cy7E+kBMPl+cEnM/06VDfJqMHgU=
+			Xxla95EAMJblc9K7940jhmkVDwA=
 			</data>
 			<key>hash2</key>
 			<data>
-			3AA6h08Yvye2wNFrjDh7tKCR5pBKH3JxszINT7RIzHU=
+			nyWhA/WIETr94lPD987sHzc7XkyrYecgxCT9vy5jxYw=
 			</data>
 		</dict>
 		<key>Headers/FLYKit.h</key>
@@ -706,33 +706,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZUvCniq92eFPna9GRMTu51y1Q7Y=
+			BN4sow7W+IwBz/kt4rdf83++pJs=
 			</data>
 			<key>hash2</key>
 			<data>
-			YFyhyThpHOVozwY85QKjFhgtQ9q3zHFuNo/7n9y+bWU=
+			nWY7nwZ92IozqadWLP98Ox7fx+QZE3hybtWpUJcVco8=
 			</data>
 		</dict>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fwQfPEd/E/2SQSK8FubELftbQ0c=
+			3FuVoV89c//we2RJ7BUCaTfWpeo=
 			</data>
 			<key>hash2</key>
 			<data>
-			mzkeJMFJUU+JinT4MW76J53+pAxZ94d0+MhR2VR+VwY=
+			a2H1aZ1tI7WbJb6D7HNeIF79+DC5gYMzhiB+LH8UZps=
 			</data>
 		</dict>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I5hY1NKJRR20A7RkmsZL47igjZY=
+			76BwMz2i18F86ejCUOCG54X2d5M=
 			</data>
 			<key>hash2</key>
 			<data>
-			RSNKJLE+We9S0LgiuhQDUKw838o4K9d82896TmynYJA=
+			UZd1+j4PYrNI/sqU34rpNHAf9JrV5ZU1YsTGN7Po/v4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -215,10 +215,81 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSString;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC6FLYKit20FLYWebViewController")
+@interface FLYWebViewController : UIViewController
+@property (nonatomic, copy) NSString * _Nullable urlString;
+- (void)viewDidLoad;
+- (void)viewWillLayoutSubviews;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC6FLYKit16ImageBrowserView")
+@interface ImageBrowserView : UIView
+@property (nonatomic, copy) NSArray * _Nonnull imageDatas;
+@property (nonatomic) NSInteger index;
+- (nonnull instancetype)initWithFrame:(CGRect)frame imageDatas:(NSArray * _Nonnull)imageDatas index:(NSInteger)index;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+@end
+
+
+@class UICollectionView;
+@class NSIndexPath;
+@class UICollectionViewCell;
+
+@interface ImageBrowserView (SWIFT_EXTENSION(FLYKit)) <UICollectionViewDataSource, UICollectionViewDelegate>
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didEndDisplayingCell:(UICollectionViewCell * _Nonnull)cell forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+@class UIImage;
+@class NSURL;
+
+SWIFT_CLASS("_TtC6FLYKit13ImageZoomView")
+@interface ImageZoomView : UIScrollView
+@property (nonatomic, strong) UIImage * _Nullable image;
+@property (nonatomic, copy) NSURL * _Nullable imageUrl;
+@property (nonatomic, readonly) CGFloat minZoomScale;
+@property (nonatomic, readonly) CGFloat maxZoomScale;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+@interface ImageZoomView (SWIFT_EXTENSION(FLYKit))
+- (void)restoreZoom;
+@end
+
+
+
+@interface ImageZoomView (SWIFT_EXTENSION(FLYKit)) <UIScrollViewDelegate>
+- (UIView * _Nullable)viewForZoomingInScrollView:(UIScrollView * _Nonnull)scrollView SWIFT_WARN_UNUSED_RESULT;
+- (void)scrollViewDidZoom:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+SWIFT_CLASS("_TtC6FLYKit17ProgressImageView")
+@interface ProgressImageView : UIImageView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)layoutSubviews;
+- (void)setupImageWithImageUrl:(NSURL * _Nonnull)imageUrl completionHandler:(void (^ _Nullable)(UIImage * _Nullable))completionHandler;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+@end
+
 @protocol WaterFlowLayoutDelegate;
 @class UICollectionViewLayoutAttributes;
-@class NSIndexPath;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC6FLYKit15WaterFlowLayout")
 @interface WaterFlowLayout : UICollectionViewLayout
