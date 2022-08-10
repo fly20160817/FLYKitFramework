@@ -8,11 +8,11 @@
 
 ## Kingfisher
 
-如果想使用
+如果想使用以下几个类来加载URL图片，就必须pod 'Kingfisher'
 - ImageBrowserView(图片浏览器)、
 - ImageZoomView(图片缩放)、
 - ProgressImageView(图片下载进度)
-来加载URL图片，就必须pod 'Kingfisher'
+
 
 
 
