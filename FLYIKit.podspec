@@ -92,8 +92,8 @@ Pod::Spec.new do |spec|
   # 框架需要配置的参数环境，如头文件搜索路径
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   
-  # 依赖的其他pod模块
-  # spec.dependency "Kingfisher"
+  # 依赖的其他pod模块 (如果有多个，每个单独写一行)
+   spec.dependency "Kingfisher"
   # spec.dependency "JSONKit", "~> 1.4"
   
   
