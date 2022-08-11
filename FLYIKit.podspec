@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.name         = "FLYIKit"
   
   # 当前版本（注意，是当前版本，假如后续更新了新版本，需要修改此处，以后打的tag，保持和versin一致）
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   
   # 简要描述 (在 pod search FLYKit 的时候会显示该信息)
   spec.summary      = "fly的工具包"
@@ -39,7 +39,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  当需要支持多个平台时，需要详细写
-   spec.ios.deployment_target = "11.0"
+   spec.ios.deployment_target = "12.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -93,6 +93,7 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   
   # 依赖的其他pod模块
+  # spec.dependency "Kingfisher"
   # spec.dependency "JSONKit", "~> 1.4"
   
   
