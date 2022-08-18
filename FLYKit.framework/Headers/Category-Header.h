@@ -24,6 +24,7 @@
 #import <FLYKit/UIView+FLYLayer.h>
 #import <FLYKit/UIView+FLYExtension.h>
 #import <FLYKit/UIView+FLYLayoutConstraint.h>
+#import <FLYKit/UILabel+FLYExtension.h>
 
 
 #endif /* Category_Header_h */

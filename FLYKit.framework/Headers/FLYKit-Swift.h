@@ -195,8 +195,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFoundation;
 @import CoreGraphics;
 @import Foundation;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -215,9 +217,97 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+
+SWIFT_CLASS("_TtC6FLYKit14FLYImagePicker")
+@interface FLYImagePicker : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@class UIImage;
+
+@interface FLYImagePicker (SWIFT_EXTENSION(FLYKit))
+/// 图像选择器 (内部用的是UIImagePickerController，只能返回一张图片，.last取出来即可。)
+/// \param sourceType 源类型
+///
+/// \param finishPickingBlock 选择后的回调
+///
+- (void)imagePickerWithSourceType:(enum UIImagePickerControllerSourceType)sourceType finishPickingBlock:(void (^ _Nonnull)(NSArray<UIImage *> * _Nonnull))finishPickingBlock;
+/// 图像选择器 (内部用的是PHPickerViewController，iOS14才能使用，可以选择多张照片，返回的是数组)
+/// \param selectionLimit 选择的数量  设置为0则是无限
+///
+/// \param finishPickingBlock 选择后的回调
+///
+- (void)imagePickerWithSelectionLimit:(NSInteger)selectionLimit finishPickingBlock:(void (^ _Nonnull)(NSArray<UIImage *> * _Nonnull))finishPickingBlock SWIFT_AVAILABILITY(ios,introduced=14);
+@end
+
+@class UIImagePickerController;
+
+@interface FLYImagePicker (SWIFT_EXTENSION(FLYKit)) <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+@end
+
+@class AVMetadataMachineReadableCodeObject;
 @class NSString;
-@class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC6FLYKit15FLYScanCodeView")
+@interface FLYScanCodeView : UIView
+/// 扫描结果回调
+/// (镜头里可能有多个二维码，扫出来的结果是一个数组，如果外界只要一个，直接.first或者.last取就可以了)
+/// (我们内部对扫描结果进行了判断，不为nil才返回出去，从数组中取出来的都是可选项，外界取出来可以直接强制解包)
+@property (nonatomic, copy) void (^ _Nullable scanResult)(NSArray<AVMetadataMachineReadableCodeObject *> * _Nonnull, NSArray<NSString *> * _Nonnull);
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@class AVCaptureMetadataOutput;
+@class AVMetadataObject;
+@class AVCaptureConnection;
+
+@interface FLYScanCodeView (SWIFT_EXTENSION(FLYKit)) <AVCaptureMetadataOutputObjectsDelegate>
+- (void)captureOutput:(AVCaptureMetadataOutput * _Nonnull)output didOutputMetadataObjects:(NSArray<AVMetadataObject *> * _Nonnull)metadataObjects fromConnection:(AVCaptureConnection * _Nonnull)connection;
+@end
+
+
+
+@interface FLYScanCodeView (SWIFT_EXTENSION(FLYKit))
+/// 加载UI，如果不想要UI，只想要纯摄像头的页面，就不要调用本方法。
+- (void)loadUI;
+/// 开始扫描
+- (void)startRunning;
+/// 停止扫描
+- (void)stopRunning;
+@end
+
+@protocol FLYWaterFlowLayoutDelegate;
+@class UICollectionViewLayoutAttributes;
+@class NSIndexPath;
+
+SWIFT_CLASS("_TtC6FLYKit18FLYWaterFlowLayout")
+@interface FLYWaterFlowLayout : UICollectionViewLayout
+@property (nonatomic, strong) id <FLYWaterFlowLayoutDelegate> _Nullable delegate;
+@property (nonatomic) NSInteger columnCount;
+@property (nonatomic) CGFloat columnSpacing;
+@property (nonatomic) CGFloat rowSpacing;
+@property (nonatomic) UIEdgeInsets edgeInsets;
+- (void)prepareLayout;
+- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly) CGSize collectionViewContentSize;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_PROTOCOL("_TtP6FLYKit26FLYWaterFlowLayoutDelegate_")
+@protocol FLYWaterFlowLayoutDelegate
+/// 设置每个item的高度
+- (CGFloat)waterFlowLayout:(FLYWaterFlowLayout * _Nonnull)layout heightForItemAt:(NSIndexPath * _Nonnull)indexPath itemWidth:(CGFloat)width SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class NSBundle;
 
 SWIFT_CLASS("_TtC6FLYKit20FLYWebViewController")
 @interface FLYWebViewController : UIViewController
@@ -241,7 +331,6 @@ SWIFT_CLASS("_TtC6FLYKit16ImageBrowserView")
 
 
 @class UICollectionView;
-@class NSIndexPath;
 @class UICollectionViewCell;
 
 @interface ImageBrowserView (SWIFT_EXTENSION(FLYKit)) <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -250,7 +339,6 @@ SWIFT_CLASS("_TtC6FLYKit16ImageBrowserView")
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didEndDisplayingCell:(UICollectionViewCell * _Nonnull)cell forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
-@class UIImage;
 @class NSURL;
 
 SWIFT_CLASS("_TtC6FLYKit13ImageZoomView")
@@ -264,11 +352,11 @@ SWIFT_CLASS("_TtC6FLYKit13ImageZoomView")
 @end
 
 
-
-
 @interface ImageZoomView (SWIFT_EXTENSION(FLYKit))
 - (void)restoreZoom;
 @end
+
+
 
 
 
@@ -286,31 +374,6 @@ SWIFT_CLASS("_TtC6FLYKit17ProgressImageView")
 - (void)setupImageWithImageUrl:(NSURL * _Nonnull)imageUrl completionHandler:(void (^ _Nullable)(UIImage * _Nullable))completionHandler;
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
-@end
-
-@protocol WaterFlowLayoutDelegate;
-@class UICollectionViewLayoutAttributes;
-
-SWIFT_CLASS("_TtC6FLYKit15WaterFlowLayout")
-@interface WaterFlowLayout : UICollectionViewLayout
-@property (nonatomic, strong) id <WaterFlowLayoutDelegate> _Nullable delegate;
-@property (nonatomic) NSInteger columnCount;
-@property (nonatomic) CGFloat columnSpacing;
-@property (nonatomic) CGFloat rowSpacing;
-@property (nonatomic) UIEdgeInsets edgeInsets;
-- (void)prepareLayout;
-- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
-- (UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly) CGSize collectionViewContentSize;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_PROTOCOL("_TtP6FLYKit23WaterFlowLayoutDelegate_")
-@protocol WaterFlowLayoutDelegate
-/// 设置每个item的高度
-- (CGFloat)waterFlowLayout:(WaterFlowLayout * _Nonnull)layout heightForItemAt:(NSIndexPath * _Nonnull)indexPath itemWidth:(CGFloat)width SWIFT_WARN_UNUSED_RESULT;
 @end
 
 #if __has_attribute(external_source_symbol)
