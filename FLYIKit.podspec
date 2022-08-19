@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.name         = "FLYIKit"
   
   # 当前版本（注意，是当前版本，假如后续更新了新版本，需要修改此处，以后打的tag，保持和versin一致）
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   
   # 简要描述 (在 pod search FLYKit 的时候会显示该信息)
   spec.summary      = "fly的工具包"
@@ -94,7 +94,7 @@ Pod::Spec.new do |spec|
   
   # 依赖的其他pod模块 (如果有多个，每个单独写一行)
    spec.dependency "Kingfisher"
-  # spec.dependency "JSONKit", "~> 1.4"
+   spec.dependency "MJRefresh"
   
   
   # pod_target_xcconfig：当前库的 Build Settings 设置

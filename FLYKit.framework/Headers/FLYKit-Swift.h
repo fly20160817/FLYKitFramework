@@ -257,7 +257,7 @@ SWIFT_CLASS("_TtC6FLYKit15FLYScanCodeView")
 /// (镜头里可能有多个二维码，扫出来的结果是一个数组，如果外界只要一个，直接.first或者.last取就可以了)
 /// (我们内部对扫描结果进行了判断，不为nil才返回出去，从数组中取出来的都是可选项，外界取出来可以直接强制解包)
 @property (nonatomic, copy) void (^ _Nullable scanResult)(NSArray<AVMetadataMachineReadableCodeObject *> * _Nonnull, NSArray<NSString *> * _Nonnull);
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 

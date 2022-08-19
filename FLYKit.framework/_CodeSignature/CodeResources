@@ -4,9 +4,41 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>FLYKitBundle.bundle/Scan@2x.png</key>
+		<data>
+		BAgtamvEzoXG6Iy6Zj808lY855I=
+		</data>
+		<key>FLYKitBundle.bundle/Scan@3x.png</key>
+		<data>
+		C6dRvUQGCatrp1h1I7g/GdHzilo=
+		</data>
+		<key>FLYKitBundle.bundle/img_collapse@2x.png</key>
+		<data>
+		PrqpnqgeDfLDDwqMZq8tw4q3IXo=
+		</data>
+		<key>FLYKitBundle.bundle/img_collapse@3x.png</key>
+		<data>
+		tZDYz5aDcozzTFVFdUfOYMIrhHg=
+		</data>
+		<key>FLYKitBundle.bundle/img_empty@2x.png</key>
+		<data>
+		TgukyeAmlqYAmv0YFTPb2RTwwuA=
+		</data>
+		<key>FLYKitBundle.bundle/img_empty@3x.png</key>
+		<data>
+		Igap5E/g5sNrNKvuhlRWDuWAVqc=
+		</data>
+		<key>FLYKitBundle.bundle/img_error@2x.png</key>
+		<data>
+		JJiBd9NPFyjQ28PGq5k0Pyce27s=
+		</data>
+		<key>FLYKitBundle.bundle/img_error@3x.png</key>
+		<data>
+		1IFfyoa+RRNyag+mh5xixLTNjX8=
+		</data>
 		<key>Headers/Category-Header.h</key>
 		<data>
-		zGLltuLrR/I6DluN53jfiVO4u48=
+		yLUFmtLC3rrN0Z3V4rJDXSdWhQI=
 		</data>
 		<key>Headers/Class-Header.h</key>
 		<data>
@@ -32,6 +64,10 @@
 		<data>
 		nEQFAM4uv7i9ohJM4Ibg+3gqnwA=
 		</data>
+		<key>Headers/FLYDataStatusProtocal.h</key>
+		<data>
+		EGURWei8BfrXapO9inLLqb7OnPc=
+		</data>
 		<key>Headers/FLYDeviceManager.h</key>
 		<data>
 		vNeQ75vVIVcb/u2fTn6RfKmALXw=
@@ -50,7 +86,7 @@
 		</data>
 		<key>Headers/FLYKit-Swift.h</key>
 		<data>
-		+kyMHJsez7AxVLIW9RK5z0gdDHQ=
+		q4CxA175vWU0v0o9Ua73X1/PDVU=
 		</data>
 		<key>Headers/FLYKit.h</key>
 		<data>
@@ -164,6 +200,10 @@
 		<data>
 		EsxlBS9hG1iPgkj99FwxGemMilg=
 		</data>
+		<key>Headers/UICollectionView+FLYRefresh.h</key>
+		<data>
+		ajTwy8ChYoNf9qPzOnjgaDfpPzI=
+		</data>
 		<key>Headers/UIColor+FLYHex.h</key>
 		<data>
 		uMqr4fgiBOE7jhrVKXCIIgJuc3s=
@@ -179,6 +219,10 @@
 		<key>Headers/UILabel+FLYExtension.h</key>
 		<data>
 		AKSAmha0OB8i39X8dpi9757ukmg=
+		</data>
+		<key>Headers/UITableView+FLYRefresh.h</key>
+		<data>
+		r0HkQY3HcjRpkaBVQwZw0A1Jaw8=
 		</data>
 		<key>Headers/UIView+FLYExtension.h</key>
 		<data>
@@ -202,7 +246,7 @@
 		</data>
 		<key>Modules/FLYKit.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		3kUATBAOE3Hr9iwKk/46NiHbusc=
+		maSqddSsVu/czQRCPxWN5QF6KRI=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -210,7 +254,7 @@
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		X9D+JYqE0K1C1Bm//pWwJeyiLu8=
+		R4yZs0oC+yOOqdKwNDtgNFwyh0g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -219,15 +263,103 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>FLYKitBundle.bundle/Scan@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BAgtamvEzoXG6Iy6Zj808lY855I=
+			</data>
+			<key>hash2</key>
+			<data>
+			VcjgxogU+PY0avt5ImFM3BM8YAO6nVpi2v0S5AekqdA=
+			</data>
+		</dict>
+		<key>FLYKitBundle.bundle/Scan@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			C6dRvUQGCatrp1h1I7g/GdHzilo=
+			</data>
+			<key>hash2</key>
+			<data>
+			tvYa4NfBWf0793fH/wFgdZJcQkq+PZSoKmQLklHKTPo=
+			</data>
+		</dict>
+		<key>FLYKitBundle.bundle/img_collapse@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PrqpnqgeDfLDDwqMZq8tw4q3IXo=
+			</data>
+			<key>hash2</key>
+			<data>
+			hqnjvdygycVcLFpAb4GpHa8VWwUmAgSPioo6/FenJ4s=
+			</data>
+		</dict>
+		<key>FLYKitBundle.bundle/img_collapse@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tZDYz5aDcozzTFVFdUfOYMIrhHg=
+			</data>
+			<key>hash2</key>
+			<data>
+			hQ2FVmWbZMUBUYEnKf7mCl5vNzq6XHHWq4lK9D94XlU=
+			</data>
+		</dict>
+		<key>FLYKitBundle.bundle/img_empty@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TgukyeAmlqYAmv0YFTPb2RTwwuA=
+			</data>
+			<key>hash2</key>
+			<data>
+			DH5KNav0Tfdsh4LG1irD+GU0SKxrLUrv1WZJwMdFH+A=
+			</data>
+		</dict>
+		<key>FLYKitBundle.bundle/img_empty@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Igap5E/g5sNrNKvuhlRWDuWAVqc=
+			</data>
+			<key>hash2</key>
+			<data>
+			Q851VJ7PiIkbB65BVYiZxUHGI1TlbhZYaOy4jqGtRaU=
+			</data>
+		</dict>
+		<key>FLYKitBundle.bundle/img_error@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JJiBd9NPFyjQ28PGq5k0Pyce27s=
+			</data>
+			<key>hash2</key>
+			<data>
+			Kmuuk/GLtq48fFE5JTIrAuagrjZGX14bgxu5dChhcwk=
+			</data>
+		</dict>
+		<key>FLYKitBundle.bundle/img_error@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1IFfyoa+RRNyag+mh5xixLTNjX8=
+			</data>
+			<key>hash2</key>
+			<data>
+			gvNKAS+KZezPm3KSKCvwiaLO+aHqhIrOww2fm9AiPlQ=
+			</data>
+		</dict>
 		<key>Headers/Category-Header.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zGLltuLrR/I6DluN53jfiVO4u48=
+			yLUFmtLC3rrN0Z3V4rJDXSdWhQI=
 			</data>
 			<key>hash2</key>
 			<data>
-			90eBPDtC8bnBGuSp6ENmQpIaMeQmZcnMGQN4EMiGw0g=
+			xqX4Qv7b66kPYfEDqmO7LeIQFGsXAfMe5n71EeCCdPE=
 			</data>
 		</dict>
 		<key>Headers/Class-Header.h</key>
@@ -296,6 +428,17 @@
 			s1MjBFkJvDgD6y7TVCjC8LlXwo0PqULl0liavnSmB18=
 			</data>
 		</dict>
+		<key>Headers/FLYDataStatusProtocal.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EGURWei8BfrXapO9inLLqb7OnPc=
+			</data>
+			<key>hash2</key>
+			<data>
+			WhYgmBkm7Xhs7OuAnIwkql4h0280+0BtNjUfYpt+qik=
+			</data>
+		</dict>
 		<key>Headers/FLYDeviceManager.h</key>
 		<dict>
 			<key>hash</key>
@@ -344,11 +487,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+kyMHJsez7AxVLIW9RK5z0gdDHQ=
+			q4CxA175vWU0v0o9Ua73X1/PDVU=
 			</data>
 			<key>hash2</key>
 			<data>
-			5izlVfiuVVAZs5VO0wzFLUREsCsd2v6U9nnNFLp87KQ=
+			ZVYhS1DLOq3+M4z8KmvHcqFqmlDsjchgaUOCStMx9+s=
 			</data>
 		</dict>
 		<key>Headers/FLYKit.h</key>
@@ -659,6 +802,17 @@
 			+QlJkx/khXZEAQqU5lnYXySLa9iViC9dFXdmDe+G4+0=
 			</data>
 		</dict>
+		<key>Headers/UICollectionView+FLYRefresh.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ajTwy8ChYoNf9qPzOnjgaDfpPzI=
+			</data>
+			<key>hash2</key>
+			<data>
+			44Le+9Pt/XsdRZeyqq0z6lBQEdInvoUYQhTe6OUns7U=
+			</data>
+		</dict>
 		<key>Headers/UIColor+FLYHex.h</key>
 		<dict>
 			<key>hash</key>
@@ -701,6 +855,17 @@
 			<key>hash2</key>
 			<data>
 			Vlb/6ncprqbk+URJgZLemtW84dYsIjjmsF73Slpq164=
+			</data>
+		</dict>
+		<key>Headers/UITableView+FLYRefresh.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			r0HkQY3HcjRpkaBVQwZw0A1Jaw8=
+			</data>
+			<key>hash2</key>
+			<data>
+			Rykj1esQ34852zu/yORyzU8T7huSkOA4NPlUag7Etu8=
 			</data>
 		</dict>
 		<key>Headers/UIView+FLYExtension.h</key>
@@ -751,11 +916,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3kUATBAOE3Hr9iwKk/46NiHbusc=
+			maSqddSsVu/czQRCPxWN5QF6KRI=
 			</data>
 			<key>hash2</key>
 			<data>
-			0QKugX6XzH0Vv4VcYKuKb6UYYkORfZZ8W7kk2tw0VWM=
+			W5ZzmGm1n1sDL7piPq9viLpn5CLu1Xbcj5X8VtyxNl4=
 			</data>
 		</dict>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -773,11 +938,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			X9D+JYqE0K1C1Bm//pWwJeyiLu8=
+			R4yZs0oC+yOOqdKwNDtgNFwyh0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			WlzGpTkUgGtqGXU2lDrdZp9jufLyLmX8COlJFy6vZgE=
+			Bu0bGym5sI0P6DKYZPXNXiW/iwEd6zCAF1bVHaYefKI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
