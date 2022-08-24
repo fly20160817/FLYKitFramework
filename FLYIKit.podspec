@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.name         = "FLYIKit"
   
   # 当前版本（注意，是当前版本，假如后续更新了新版本，需要修改此处，以后打的tag，保持和versin一致）
-  spec.version      = "0.0.5"
+  spec.version      = "0.0.9"
   
   # 简要描述 (在 pod search FLYKit 的时候会显示该信息)
   spec.summary      = "fly的工具包"
@@ -70,6 +70,8 @@ Pod::Spec.new do |spec|
   # 资源文件（配置的文件都会被放到mainBundle中）
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
+    spec.resource = "**/FLYKit.framework/FLYKitBundle.bundle"
+
 
   # 框架 install 或者 update 之后不会更新的文件路径
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
