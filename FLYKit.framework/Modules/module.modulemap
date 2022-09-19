@@ -6,6 +6,6 @@ framework module FLYKit {
 }
 
 module FLYKit.Swift {
-    header "FLYKit-Swift.h"
-    requires objc
+  header "FLYKit-Swift.h"
+  requires objc
 }
