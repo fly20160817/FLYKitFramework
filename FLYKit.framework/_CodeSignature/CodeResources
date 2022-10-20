@@ -56,6 +56,10 @@
 		<data>
 		tj6P5MdXnQY/pTNEvKjUJZRq9Iw=
 		</data>
+		<key>Headers/FLYBluetoothManager.h</key>
+		<data>
+		h61usrTf5ia1KunZywO5IVffT3Q=
+		</data>
 		<key>Headers/FLYButton.h</key>
 		<data>
 		alT7DYPiPKtSXCVK8rqXwJ2YTRk=
@@ -182,7 +186,7 @@
 		</data>
 		<key>Headers/Tools-Header.h</key>
 		<data>
-		yYijvfjWqhuO8fI1Mc4U6V5/6hQ=
+		44cCaP8CoxAncfS2JZSKAULq0Z8=
 		</data>
 		<key>Headers/UI-Header.h</key>
 		<data>
@@ -246,7 +250,7 @@
 		</data>
 		<key>Modules/FLYKit.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		/07VkoJZSlWdcTGhYep0vrKOpno=
+		zyWfnqJCaP/9K3G1JRM8GFxldfI=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -408,6 +412,17 @@
 			<key>hash2</key>
 			<data>
 			elHLrQavTMEGtHXAgaqgEBkN1jUOvyy+8Tpq6weqyac=
+			</data>
+		</dict>
+		<key>Headers/FLYBluetoothManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			h61usrTf5ia1KunZywO5IVffT3Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			UycJ/dDcNdXGlNX0jY0NAtZ2b2IHuoX3KH5BdrYam4U=
 			</data>
 		</dict>
 		<key>Headers/FLYButton.h</key>
@@ -755,11 +770,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yYijvfjWqhuO8fI1Mc4U6V5/6hQ=
+			44cCaP8CoxAncfS2JZSKAULq0Z8=
 			</data>
 			<key>hash2</key>
 			<data>
-			i7ag8wOwVWFHh8ll3ggI4k2FAyHxD1YRi9CRRhSuKfo=
+			z+7ZKs1vEgQ1a5HIAvX2Fp3DNo2m7JoNzVwzHFI/170=
 			</data>
 		</dict>
 		<key>Headers/UI-Header.h</key>
@@ -920,11 +935,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/07VkoJZSlWdcTGhYep0vrKOpno=
+			zyWfnqJCaP/9K3G1JRM8GFxldfI=
 			</data>
 			<key>hash2</key>
 			<data>
-			XIHvbuusNG31vUPUkOUnfNq5m69tANta0uSwPUr2Q98=
+			qpndzmkPJi/MFfdtRWz/keChtqJBCdFXjB6UjBa4hIc=
 			</data>
 		</dict>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.abi.json</key>

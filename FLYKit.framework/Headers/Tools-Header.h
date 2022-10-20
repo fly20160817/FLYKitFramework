@@ -22,5 +22,6 @@
 #import <FLYKit/FLYDeviceManager.h>
 #import <FLYKit/FLYPrivacy.h>
 #import <FLYKit/FLYQRCodeTools.h>
+#import <FLYKit/FLYBluetoothManager.h>
 
 #endif /* Tools_Header_h */
