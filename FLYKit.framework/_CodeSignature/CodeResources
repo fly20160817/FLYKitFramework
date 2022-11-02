@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/NSString+FLYExtension.h</key>
 		<data>
-		cc38YCsXCclKhn/O8rM+IV+W0AA=
+		IG4PTzoVPysUDVBieLp4I+s0UEo=
 		</data>
 		<key>Headers/NSString+FLYHandle.h</key>
 		<data>
@@ -246,11 +246,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Aql2hTYV7vWskDANu2xqjy6a/3g=
+		BCpwbi/JCJtmY66Q10WavF8d2bo=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		zyWfnqJCaP/9K3G1JRM8GFxldfI=
+		8Fxrw1zGOKmylyb5KcfXysD06A4=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -262,7 +262,7 @@
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		l+1W8VzDVGP69FmKRBmCZTZtLus=
+		s+Ej+Q0oIdENBrZ9/uCGClxF4Og=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -737,11 +737,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cc38YCsXCclKhn/O8rM+IV+W0AA=
+			IG4PTzoVPysUDVBieLp4I+s0UEo=
 			</data>
 			<key>hash2</key>
 			<data>
-			GfP9movmKn77EHvsTeTM0pcbTnSUKkZCPWvSpjtppF0=
+			KM5W9t8xPu8CmY6t/1lIANECJ4y4o4kOHd3ocL35KH0=
 			</data>
 		</dict>
 		<key>Headers/NSString+FLYHandle.h</key>
@@ -935,11 +935,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zyWfnqJCaP/9K3G1JRM8GFxldfI=
+			8Fxrw1zGOKmylyb5KcfXysD06A4=
 			</data>
 			<key>hash2</key>
 			<data>
-			qpndzmkPJi/MFfdtRWz/keChtqJBCdFXjB6UjBa4hIc=
+			epBg0vsQtArL0msMv2+zn4JtXW1/mw03E42ERQaSLBk=
 			</data>
 		</dict>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -968,11 +968,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l+1W8VzDVGP69FmKRBmCZTZtLus=
+			s+Ej+Q0oIdENBrZ9/uCGClxF4Og=
 			</data>
 			<key>hash2</key>
 			<data>
-			qo/Cb1mxW8X5j3X9nAhMZHxnuGfBhrKhUki9M5/EdoI=
+			jPE+Hcq8XoL/R737OV/Z7KOckcryRm0ix2V2rJRu79g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
