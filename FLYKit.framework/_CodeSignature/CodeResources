@@ -90,7 +90,7 @@
 		</data>
 		<key>Headers/FLYKit-Swift.h</key>
 		<data>
-		obSY4JlWaghVX+/7GRzbw1VFT54=
+		hGpLUZZvngE3iYi5iZjvm0IneGQ=
 		</data>
 		<key>Headers/FLYKit.h</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Headers/FLYPopupView.h</key>
 		<data>
-		2Y+NQKsrBJ2jb8tN7oRZmZuTMWs=
+		GVKJVJk3hRkCGyoAzoYDytJqsGA=
 		</data>
 		<key>Headers/FLYPrivacy.h</key>
 		<data>
@@ -246,11 +246,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BCpwbi/JCJtmY66Q10WavF8d2bo=
+		GzuGKZDWd1rwkQZOnyGwUNxNwqk=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		8Fxrw1zGOKmylyb5KcfXysD06A4=
+		y+y93/5MqRd2YJg7ysQnLhL/i40=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -258,11 +258,11 @@
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		hg2jqxypVdrEqluTh9o3lNzDMSQ=
+		PGX9i2iVnLPkzW3ysJ7xPg6Z5j0=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		s+Ej+Q0oIdENBrZ9/uCGClxF4Og=
+		ZGJ+uWprLq+ZJoHiqA26pSh4UpU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -506,11 +506,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			obSY4JlWaghVX+/7GRzbw1VFT54=
+			hGpLUZZvngE3iYi5iZjvm0IneGQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ioOknob5WSuNjiKrkSMfS2srJIXgMc1tNXRtapU8OkQ=
+			reobUvWNFxb+0wuBntKtvB5eNwEs3OejLlix+B6eYus=
 			</data>
 		</dict>
 		<key>Headers/FLYKit.h</key>
@@ -583,11 +583,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2Y+NQKsrBJ2jb8tN7oRZmZuTMWs=
+			GVKJVJk3hRkCGyoAzoYDytJqsGA=
 			</data>
 			<key>hash2</key>
 			<data>
-			6ILCCjU6CBta8rsn/JD9qhFvrXB14tmgQ8SEBQypR+4=
+			JiONb3T+aarRUPC3u9d4ZsoisQKoI3dm8pZGVQNZzKY=
 			</data>
 		</dict>
 		<key>Headers/FLYPrivacy.h</key>
@@ -935,11 +935,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8Fxrw1zGOKmylyb5KcfXysD06A4=
+			y+y93/5MqRd2YJg7ysQnLhL/i40=
 			</data>
 			<key>hash2</key>
 			<data>
-			epBg0vsQtArL0msMv2+zn4JtXW1/mw03E42ERQaSLBk=
+			KiADjIfHtflmgv1+OUaLfRcBLvSjm0zvU4FfKe38Kg4=
 			</data>
 		</dict>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -957,22 +957,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hg2jqxypVdrEqluTh9o3lNzDMSQ=
+			PGX9i2iVnLPkzW3ysJ7xPg6Z5j0=
 			</data>
 			<key>hash2</key>
 			<data>
-			QhjeX6AF1y99h3A2xSZkiFFlLnX4uWKYFnf0MzzNguo=
+			AaMYEO/MHNPUEw++ZO7OvVC4zu1k6KHqfnBdv5jlQF8=
 			</data>
 		</dict>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s+Ej+Q0oIdENBrZ9/uCGClxF4Og=
+			ZGJ+uWprLq+ZJoHiqA26pSh4UpU=
 			</data>
 			<key>hash2</key>
 			<data>
-			jPE+Hcq8XoL/R737OV/Z7KOckcryRm0ix2V2rJRu79g=
+			pQBfuz9lptfPTnTr+yMpGQNR4ozhYX4PmLY3vAUWbWw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

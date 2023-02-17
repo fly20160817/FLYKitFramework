@@ -1,6 +1,6 @@
 //
 //  FLYPopupView.h
-//  axz
+//  FLYKit
 //
 //  Created by fly on 2021/4/16.
 //
@@ -64,8 +64,12 @@ typedef NS_ENUM(NSUInteger, FLYPopupViewMaskType) {
 /** dissmissBlock */
 @property (nonatomic, copy) void(^dissmissBlock)(void);
 
-/** PopupView不是全屏时，点击非PopupView部分，会自动dissmiss。如果不想点击其他地方dissmiss，可以把那个view传进来 */
-@property (nonatomic, strong) NSArray * noDissmissViews;
+/** PopupView不是全屏时，点击非PopupView部分，会自动dissmiss。如果不想点击其他地方dissmiss，可以把那个view传进来 (如果是导航栏按钮，UIBarButtonItem不是view类型传不进来，但可以通过initWithCustomView来创建UIBarButtonItem，把item.customView传进来就可以了) */
+@property (nonatomic, strong) NSArray<UIView *> * noDissmissViews;
+
+/** 是否正在显示 */
+@property (nonatomic, readonly) BOOL isShowing;
+
 
 
 + (instancetype)popupView;
@@ -84,4 +88,6 @@ typedef NS_ENUM(NSUInteger, FLYPopupViewMaskType) {
 @end
 
 NS_ASSUME_NONNULL_END
+
+
 
