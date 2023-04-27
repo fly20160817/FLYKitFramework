@@ -48,9 +48,13 @@
 		<data>
 		XiacTLsnUiPGLFSwkT7zYLCYq6k=
 		</data>
-		<key>Headers/FLYAudioTools.h</key>
+		<key>Headers/FLYAudioPlayerManager.h</key>
 		<data>
-		B8m0gKAHRtDVuMrjLCiW7NjPtBo=
+		tK69aH79Ah2/g4Zq95X+5Kuz7Rg=
+		</data>
+		<key>Headers/FLYAudioRecorderManager.h</key>
+		<data>
+		HF37WnW/1SQDgsMbQGUjpMhTwuQ=
 		</data>
 		<key>Headers/FLYBase64.h</key>
 		<data>
@@ -140,6 +144,10 @@
 		<data>
 		txLKLtCj+6fGnd1bfGl7p9Xjpcw=
 		</data>
+		<key>Headers/FLYSoundTools.h</key>
+		<data>
+		jf8TCCGggwJBs75KWYA6fu5ocUc=
+		</data>
 		<key>Headers/FLYTextField.h</key>
 		<data>
 		OQetLeACXaI6bAwX/hzqOjLlSK4=
@@ -186,7 +194,7 @@
 		</data>
 		<key>Headers/Tools-Header.h</key>
 		<data>
-		44cCaP8CoxAncfS2JZSKAULq0Z8=
+		UBV0v4RzUdff6G2q1dhJGMXBpvk=
 		</data>
 		<key>Headers/UI-Header.h</key>
 		<data>
@@ -392,15 +400,26 @@
 			MReW0Ou7Ekeqo6inmMuBrecFWm7l3RkiCrW+95iAGcM=
 			</data>
 		</dict>
-		<key>Headers/FLYAudioTools.h</key>
+		<key>Headers/FLYAudioPlayerManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			B8m0gKAHRtDVuMrjLCiW7NjPtBo=
+			tK69aH79Ah2/g4Zq95X+5Kuz7Rg=
 			</data>
 			<key>hash2</key>
 			<data>
-			xOBiZSx4dZTRlvbf4RCdGESzzYL61zYkzBrD+svK2wg=
+			kZ0MraLVHV9ozUYSZQ7/J8hYui7XNu8caghStc1kk84=
+			</data>
+		</dict>
+		<key>Headers/FLYAudioRecorderManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HF37WnW/1SQDgsMbQGUjpMhTwuQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			RvlGAsAgg3bK3l6mCi/WBgDGG5QrKLVmHwLeBbyYKNs=
 			</data>
 		</dict>
 		<key>Headers/FLYBase64.h</key>
@@ -645,6 +664,17 @@
 			tE29DJgmvJYlr0XX/0xdFrBdx+EpTa4r4k9jcDhvkME=
 			</data>
 		</dict>
+		<key>Headers/FLYSoundTools.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jf8TCCGggwJBs75KWYA6fu5ocUc=
+			</data>
+			<key>hash2</key>
+			<data>
+			gIxRBAlnvmjVputI3IDcr6Jva+kAPJcdWzXbdDuPwRc=
+			</data>
+		</dict>
 		<key>Headers/FLYTextField.h</key>
 		<dict>
 			<key>hash</key>
@@ -770,11 +800,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			44cCaP8CoxAncfS2JZSKAULq0Z8=
+			UBV0v4RzUdff6G2q1dhJGMXBpvk=
 			</data>
 			<key>hash2</key>
 			<data>
-			z+7ZKs1vEgQ1a5HIAvX2Fp3DNo2m7JoNzVwzHFI/170=
+			Hv5q2JsyXQ3FtEc/5cqI/l0diJ+BTBPi83Maz4tku3g=
 			</data>
 		</dict>
 		<key>Headers/UI-Header.h</key>

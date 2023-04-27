@@ -12,7 +12,6 @@
 #import <FLYKit/FLYTime.h>
 #import <FLYKit/FLYFileManager.h>
 #import <FLYKit/FLYPhotoManager.h>
-#import <FLYKit/FLYAudioTools.h>
 #import <FLYKit/FLYBase64.h>
 #import <FLYKit/FLYHash.h>
 #import <FLYKit/FLYAES.h>
@@ -23,5 +22,10 @@
 #import <FLYKit/FLYPrivacy.h>
 #import <FLYKit/FLYQRCodeTools.h>
 #import <FLYKit/FLYBluetoothManager.h>
+#import <FLYKit/FLYSoundTools.h>
+#import <FLYKit/FLYAudioPlayerManager.h>
+#import <FLYKit/FLYAudioRecorderManager.h>
+
 
 #endif /* Tools_Header_h */
+
