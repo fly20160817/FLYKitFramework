@@ -16,13 +16,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FLYPhotoManager : NSObject
 
+
+/// 保存图片到系统相册
+/// - Parameters:
+///   - image: 图片
+///   - completion: 保存完成的回调
++ (void)saveImageToPhotosAlbum:(UIImage *)image completion:(void (^)(BOOL success, NSError *error))completion;
+
+
 /**
-    保存图片到自己自定义的相册。
+    保存图片到自己自定义的相册
     Photo: 图片
     albumTitle: 自定义相册的名字
-    completionHandler: 保存完成的回调
+    completion: 保存完成的回调
  */
-+ (void)savePhoto:(UIImage *)image albumTitle:(NSString *)albumTitle completionHandler:(void(^)(BOOL success, NSError *error))completionHandler;
++ (void)savePhoto:(UIImage *)image albumTitle:(NSString *)albumTitle completion:(void(^)(BOOL success, NSError *error))completion;
 
 
 
