@@ -14,6 +14,7 @@
 #import <FLYKit/NSString+FLYHandle.h>
 #import <FLYKit/NSString+FLYExtension.h>
 #import <FLYKit/NSString+FLYVerification.h>
+#import <FLYKit/NSData+FLYHex.h>
 #import <FLYKit/UIAlertController+FLYExtension.h>
 #import <FLYKit/UIBarButtonItem+FLYExtension.h>
 #import <FLYKit/UIButton+FLYExtension.h>
@@ -28,5 +29,6 @@
 #import <FLYKit/UITableView+FLYRefresh.h>
 #import <FLYKit/UICollectionView+FLYRefresh.h>
 #import <FLYKit/FLYDataStatusProtocal.h>
+#import <FLYKit/UINavigationController+FLYExtension.h>
 
 #endif /* Category_Header_h */
