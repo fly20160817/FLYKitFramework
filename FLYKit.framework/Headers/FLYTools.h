@@ -38,6 +38,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIEdgeInsets)safeAreaInsets;
 
 
+/// 获取视图的屏幕截图 (view转image)
++ (UIImage *)takeScreenshotOfView:(UIView *)view;
+
+
 /**
  * 比较版本号
  *

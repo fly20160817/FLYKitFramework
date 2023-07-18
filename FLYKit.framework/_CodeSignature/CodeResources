@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/FLYPhotoManager.h</key>
 		<data>
-		O83/BdNGoID8epQHC0YM76DI2+M=
+		+vV0hfMYPJZ7ctiMSR3uL4m4/2E=
 		</data>
 		<key>Headers/FLYPopup.h</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Headers/FLYTools.h</key>
 		<data>
-		4D9Z6og1MUEhnON3DIp77VAu520=
+		fasmiELgEnoP6tJ/X8bLOcaDD5s=
 		</data>
 		<key>Headers/FLYViewController.h</key>
 		<data>
@@ -266,7 +266,7 @@
 		</data>
 		<key>Modules/FLYKit.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		y+y93/5MqRd2YJg7ysQnLhL/i40=
+		zsH7zLzIOAQ0czrMUat2t0f31kE=
 		</data>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -588,11 +588,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			O83/BdNGoID8epQHC0YM76DI2+M=
+			+vV0hfMYPJZ7ctiMSR3uL4m4/2E=
 			</data>
 			<key>hash2</key>
 			<data>
-			JQCSe89OWE6qnj5sZCsQfK4XYthqrZ9OkW7vIfJgTD4=
+			/WtOm1QSYjkwtjduJnFcSbMhZQU9Cr/4eStUq7+CNiw=
 			</data>
 		</dict>
 		<key>Headers/FLYPopup.h</key>
@@ -720,11 +720,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4D9Z6og1MUEhnON3DIp77VAu520=
+			fasmiELgEnoP6tJ/X8bLOcaDD5s=
 			</data>
 			<key>hash2</key>
 			<data>
-			6iYvKY3kqqLrjwTcsc/aejQfG1L7r4PJEU3BS8onpDw=
+			D+awD9Vzh2Y77qXsAAlRcOT095vpP4KI2P41UtRelL4=
 			</data>
 		</dict>
 		<key>Headers/FLYViewController.h</key>
@@ -995,11 +995,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y+y93/5MqRd2YJg7ysQnLhL/i40=
+			zsH7zLzIOAQ0czrMUat2t0f31kE=
 			</data>
 			<key>hash2</key>
 			<data>
-			KiADjIfHtflmgv1+OUaLfRcBLvSjm0zvU4FfKe38Kg4=
+			+dJOuqlQdwLU/9vT0rTB8T5YEtg3Hm8QBLb3hOHdo+g=
 			</data>
 		</dict>
 		<key>Modules/FLYKit.swiftmodule/arm64-apple-ios.abi.json</key>

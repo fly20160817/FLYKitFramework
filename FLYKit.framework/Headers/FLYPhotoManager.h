@@ -26,11 +26,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
     保存图片到自己自定义的相册
-    Photo: 图片
+    image: 图片
     albumTitle: 自定义相册的名字
     completion: 保存完成的回调
  */
-+ (void)savePhoto:(UIImage *)image albumTitle:(NSString *)albumTitle completion:(void(^)(BOOL success, NSError *error))completion;
++ (void)saveImage:(UIImage *)image albumTitle:(NSString *)albumTitle completion:(void(^)(BOOL success, NSError *error))completion;
 
 
 
