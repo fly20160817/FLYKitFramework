@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FLYDataStatusProtocal.h"
+#import <FLYKit/FLYDataStatusProtocal.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

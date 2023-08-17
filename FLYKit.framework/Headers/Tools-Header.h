@@ -22,6 +22,8 @@
 #import <FLYKit/FLYPrivacy.h>
 #import <FLYKit/FLYQRCodeTools.h>
 #import <FLYKit/FLYBluetoothManager.h>
+#import <FLYKit/FLYBluetoothHandler.h>
+#import <FLYKit/CBPeripheral+FLYExtension.h>
 #import <FLYKit/FLYSoundTools.h>
 #import <FLYKit/FLYAudioPlayerManager.h>
 #import <FLYKit/FLYAudioRecorderManager.h>

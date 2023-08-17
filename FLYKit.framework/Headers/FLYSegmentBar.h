@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FLYSegmentBarConfig.h"
+#import <FLYKit/FLYSegmentBarConfig.h>
 
 @class FLYSegmentBar;
 

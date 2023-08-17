@@ -26,6 +26,10 @@
 #define SAFE_BOTTOM [FLYTools safeAreaInsets].bottom
 
 
+/* 在 DEBUG 模式下，FLYLog 会被替换成 NSLog，并保留原本的参数传递，从而输出日志。
+   在 Release 模式下，FLYLog 会被替换成空，从而完全移除日志输出的代码，减少应用的体积和提高性能。
+   这样在发布应用时，不会输出不必要的日志，确保应用的性能和安全性。
+ */
 #ifdef DEBUG
 #define FLYLog(...) NSLog(__VA_ARGS__)
 #else
