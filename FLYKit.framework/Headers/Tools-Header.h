@@ -27,6 +27,8 @@
 #import <FLYKit/FLYSoundTools.h>
 #import <FLYKit/FLYAudioPlayerManager.h>
 #import <FLYKit/FLYAudioRecorderManager.h>
+#import <FLYKit/FLYModelPersistenceManager.h>
+#import <FLYKit/FLYCodableModel.h>
 
 
 #endif /* Tools_Header_h */

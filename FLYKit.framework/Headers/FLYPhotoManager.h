@@ -11,27 +11,31 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /*
-    处理图片 (保存)
+    保存图片、视频到系统相册
  */
 
 @interface FLYPhotoManager : NSObject
 
 
-/// 保存图片到系统相册
-/// - Parameters:
-///   - image: 图片
-///   - completion: 保存完成的回调
-+ (void)saveImageToPhotosAlbum:(UIImage *)image completion:(void (^)(BOOL success, NSError *error))completion;
+// 保存图片到系统相册
++ (void)saveImageToPhotosAlbum:(NSArray<UIImage *> *)images completion:(void (^)(BOOL success, NSError *error))completion;
+
+// 保存图片到系统相册 (参数是图片的本地路径)
++ (void)saveImageToPhotosAlbumWithFileURLs:(NSArray<NSURL *> *)imageFileURLs completion:(void (^)(BOOL success, NSError *error))completion;
+
+// 保存视频到系统相册 (参数是视频的本地路径)
++ (void)saveVideoToPhotosAlbum:(NSArray<NSURL *> *)videoFileURLs completion:(void (^)(BOOL success, NSError *error))completion;
 
 
-/**
-    保存图片到自己自定义的相册
-    image: 图片
-    albumTitle: 自定义相册的名字
-    completion: 保存完成的回调
- */
-+ (void)saveImage:(UIImage *)image albumTitle:(NSString *)albumTitle completion:(void(^)(BOOL success, NSError *error))completion;
 
+// 保存图片到自定义的相册
++ (void)saveImages:(NSArray<UIImage *> *)images albumTitle:(NSString *)albumTitle completion:(void(^)(BOOL success, NSError *error))completion;
+
+// 保存图片到自定义的相册 (参数是图片的本地路径)
++ (void)saveImageWithFileURLs:(NSArray<NSURL *> *)imageFileURLs albumTitle:(NSString *)albumTitle completion:(void(^)(BOOL success, NSError *error))completion;
+
+// 保存视频到自定义的相册 (参数是视频的本地路径)
++ (void)saveVideoWithFileURLs:(NSArray<NSURL *> *)videoFileURLs albumTitle:(NSString *)albumTitle completion:(void (^)(BOOL success, NSError *error))completion;
 
 
 @end
