@@ -26,6 +26,8 @@
 #import <FLYKit/UIView+FLYExtension.h>
 #import <FLYKit/UIView+FLYLayoutConstraint.h>
 #import <FLYKit/UILabel+FLYExtension.h>
+#import <FLYKit/UITextField+FLYExtension.h>
+#import <FLYKit/UITextView+FLYExtension.h>
 #import <FLYKit/UITableView+FLYRefresh.h>
 #import <FLYKit/UICollectionView+FLYRefresh.h>
 #import <FLYKit/FLYDataStatusProtocal.h>

@@ -92,5 +92,9 @@
 #define PFSCT @"PingFangSC-Thin"
 
 
+// 根据 key 获取本地化字符串。
+#define LS(key) NSLocalizedString(key, nil)
+
+
 #endif
 
