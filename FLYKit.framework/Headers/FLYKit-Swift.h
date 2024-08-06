@@ -439,10 +439,10 @@ SWIFT_CLASS("_TtC6FLYKit13ImageZoomView")
 @end
 
 
+
 @interface ImageZoomView (SWIFT_EXTENSION(FLYKit))
 - (void)restoreZoom;
 @end
-
 
 
 
@@ -461,6 +461,11 @@ SWIFT_CLASS("_TtC6FLYKit17ProgressImageView")
 - (void)setupImageWithImageUrl:(NSURL * _Nonnull)imageUrl completionHandler:(void (^ _Nullable)(UIImage * _Nullable))completionHandler;
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+@end
+
+
+@interface UIDevice (SWIFT_EXTENSION(FLYKit))
+@property (nonatomic, readonly, copy) NSString * _Nonnull deviceModel;
 @end
 
 #endif

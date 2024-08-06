@@ -66,6 +66,9 @@
 //获取设备名字 （用户自定义的名字）
 #define DEVICE_NAME UIDevice.currentDevice.name
 
+//设备型号  iPhone16,1  如果需要显示具体的 iPhone 15 Pro，需要自己映射
+#define DEVICE_MODEL UIDevice.currentDevice.deviceModel
+
 //获取设备的系统版本
 #define DEVICE_VERSION UIDevice.currentDevice.systemVersion
 

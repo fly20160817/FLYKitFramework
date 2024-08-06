@@ -32,5 +32,6 @@
 #import <FLYKit/UICollectionView+FLYRefresh.h>
 #import <FLYKit/FLYDataStatusProtocal.h>
 #import <FLYKit/UINavigationController+FLYExtension.h>
+#import <FLYKit/UIDevice+FLYExtension.h>
 
 #endif /* Category_Header_h */
