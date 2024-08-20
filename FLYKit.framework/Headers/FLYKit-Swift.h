@@ -463,6 +463,12 @@ typedef SWIFT_ENUM(NSInteger, LogLevel, closed) {
 
 SWIFT_CLASS("_TtC6FLYKit6Logger")
 @interface Logger : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum LogLevel logLevel;)
++ (enum LogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
++ (void)setLogLevel:(enum LogLevel)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL isLogFileEnabled;)
++ (BOOL)isLogFileEnabled SWIFT_WARN_UNUSED_RESULT;
++ (void)setIsLogFileEnabled:(BOOL)value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -507,6 +513,16 @@ SWIFT_CLASS("_TtC6FLYKit17ProgressImageView")
 
 SWIFT_CLASS("_TtC6FLYKit12TimerManager")
 @interface TimerManager : NSObject
+/// 初始化一个新的 <code>TimerManager</code> 实例
+/// \param interval 计时器的时间间隔，单位是秒。
+///
+/// \param action 计时器触发时执行的闭包。
+///
+- (nonnull instancetype)initWithInterval:(NSTimeInterval)interval action:(void (^ _Nonnull)(void))action OBJC_DESIGNATED_INITIALIZER;
+/// 启动计时器
+- (void)startTimer;
+/// 暂停计时器
+- (void)pauseTimer;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
