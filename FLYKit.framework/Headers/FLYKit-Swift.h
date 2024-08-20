@@ -452,6 +452,47 @@ SWIFT_CLASS("_TtC6FLYKit13ImageZoomView")
 - (void)scrollViewDidZoom:(UIScrollView * _Nonnull)scrollView;
 @end
 
+typedef SWIFT_ENUM(NSInteger, LogLevel, closed) {
+  LogLevelDebug = 0,
+  LogLevelInfo = 1,
+  LogLevelWarning = 2,
+  LogLevelError = 3,
+  LogLevelCritical = 4,
+};
+
+
+SWIFT_CLASS("_TtC6FLYKit6Logger")
+@interface Logger : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+@interface Logger (SWIFT_EXTENSION(FLYKit))
+/// 记录日志信息的方法。
+/// 将 file、function 和 line 这三个参数写成方法参数，而不是直接在方法内部获取，主要是为了在调用时能够捕获到调用者所在的位置。如果直接在方法内部获取这些参数，那么它们将总是反映日志记录方法本身所在的位置，而不是调用日志方法的位置。
+/// \param message 要记录的日志信息内容。
+///
+/// \param level 日志的严重程度，默认为 <code>.info</code>。
+///
+/// \param file 不能手动传递，自动捕获日志记录所在的源文件名，默认为调用此方法的文件名。
+///
+/// \param function 不能手动传递，自动捕获日志记录所在的函数名，默认为调用此方法的函数名。
+///
+/// \param line 不能手动传递，自动捕获日志记录所在的代码行号，默认为调用此方法的代码行号。
+///
++ (void)log:(NSString * _Nonnull)message level:(enum LogLevel)level file:(NSString * _Nonnull)file function:(NSString * _Nonnull)function line:(NSInteger)line;
+/// 获取日志文件的路径。
+/// 此方法返回日志文件的完整路径，方便外部进行上传、读取或其他处理操作。
+///
+/// returns:
+/// 返回当前日志文件的完整路径。
++ (NSString * _Nonnull)getLogFilePath SWIFT_WARN_UNUSED_RESULT;
+/// 删除日志文件的方法。
+/// 此方法用于在需要时删除当前日志文件，通常是在上传或处理完日志后清理日志文件时使用。
++ (void)deleteLogFile;
+@end
+
 
 SWIFT_CLASS("_TtC6FLYKit17ProgressImageView")
 @interface ProgressImageView : UIImageView
@@ -461,6 +502,13 @@ SWIFT_CLASS("_TtC6FLYKit17ProgressImageView")
 - (void)setupImageWithImageUrl:(NSURL * _Nonnull)imageUrl completionHandler:(void (^ _Nullable)(UIImage * _Nullable))completionHandler;
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC6FLYKit12TimerManager")
+@interface TimerManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
