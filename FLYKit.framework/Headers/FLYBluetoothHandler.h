@@ -10,7 +10,7 @@
  
  本类对 FLYBluetoothManager 进行了封装，外界可以直接进行读取和写入操作。
  
- 外界不能同时调用多个方法，方法只能一个一个调用，等一个方法有回调了，才能继续调用。不然只会执行最后调用的方法。(蓝牙指令只能一个一个执行)
+ ❗️外界不能同时调用多个方法，方法只能一个一个调用，等一个方法有回调了，才能继续调用。不然只会执行最后调用的方法。(因为是单利，多次调用会覆盖内部接收的block参数)
  
  蓝牙状态判断、扫描设备、连接设备、扫描服务、扫描特征，全部都在内部实现了，外界无需过问。如果中间哪一步报错了，会在failure回调里返回错误原因，外界可以根据error的Code进行处理或弹窗提示。(蓝牙没开、授权没开，这两种错误内部进行了弹窗，如果样式不符合需求，可以通过showAlert属性关闭弹窗，外界重新写弹窗即可)
  
@@ -70,7 +70,7 @@ typedef void(^BLEUpdateValueBlock)(CBPeripheral * peripheral, CBCharacteristic *
 ///   - success: 成功的回调
 ///   - failure: 失败的回调
 ///   - progress: 进度 (扫描中、连接中、连接成功、断开连接)
-- (void)bluetoothWriteWithDeviceName:(NSString *)name data:(NSData *)data characteristicUUID:(NSString *)characteristicUUID success:(BLESuccessBlock)success failure:(BLEFailureBlock)failure progress:(BLEProgressBlock)progress;
+- (void)bluetoothWriteWithDeviceName:(NSString *)name data:(NSData *)data characteristicUUID:(NSString *)characteristicUUID success:(nullable BLESuccessBlock)success failure:(nullable BLEFailureBlock)failure progress:(nullable BLEProgressBlock)progress;
 
 
 /// 读取特征的值
@@ -80,7 +80,7 @@ typedef void(^BLEUpdateValueBlock)(CBPeripheral * peripheral, CBCharacteristic *
 ///   - success: 成功的回调
 ///   - failure: 失败的回调
 ///   - progress: 进度 (扫描中、连接中、连接成功、断开连接)
-- (void)bluetoothReadWithDeviceName:(NSString *)name characteristicUUID:(NSString *)characteristicUUID success:(BLESuccessBlock)success failure:(BLEFailureBlock)failure progress:(BLEProgressBlock)progress;
+- (void)bluetoothReadWithDeviceName:(NSString *)name characteristicUUID:(NSString *)characteristicUUID success:(nullable BLESuccessBlock)success failure:(nullable BLEFailureBlock)failure progress:(nullable BLEProgressBlock)progress;
 
 
 /// 特征里的值更新时回调
@@ -92,3 +92,5 @@ typedef void(^BLEUpdateValueBlock)(CBPeripheral * peripheral, CBCharacteristic *
 
 
 NS_ASSUME_NONNULL_END
+
+
