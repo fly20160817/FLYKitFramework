@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.name         = "FLYIKit"
   
   # 当前版本（注意，是当前版本，假如后续更新了新版本，需要修改此处，以后打的tag，保持和versin一致）
-  spec.version      = "0.6.2"
+  spec.version      = "0.6.3"
   
   # 简要描述 (在 pod search FLYKit 的时候会显示该信息)
   spec.summary      = "fly的工具包"
