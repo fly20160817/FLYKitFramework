@@ -21,10 +21,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)imageWithColor:(UIColor*)color size:(CGSize)size;
 
 
-
 /// 拉伸image
 /// @param capInsets 设置拉伸的范围
 - (UIImage *)resizableImageStretchWithCapInsets:(UIEdgeInsets)capInsets;
+
+
+/// 异步压缩图片到指定大小
+/// @param maxSizeKB 最大图片大小（单位：KB）
+/// @param completion 压缩完成后回调，返回压缩后的 UIImage
+- (void)compressToMaxSizeKB:(NSInteger)maxSizeKB completion:(void (^)(UIImage *compressedImage))completion;
+
 
 @end
 
