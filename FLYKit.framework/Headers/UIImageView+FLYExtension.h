@@ -5,6 +5,20 @@
 //  Created by fly on 2021/8/27.
 //
 
+/**
+ 加载大的gif的时候，会白一下再显示(解析GIF需要时间)。
+ 如果不满意，可以使用成熟的三方框架来实现，比如 SDWebImage
+ 例子：
+    let imageView = SDAnimatedImageView()
+    imageView.image = SDAnimatedImage(named: "lanya_sousuo.gif")
+ 
+     其他创建 gif image 的方式
+    // SDAnimatedImage(data: <#T##NSData#>)
+    // SDAnimatedImage(contentsOfFile: <#T##String#>)
+ 
+ */
+
+
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
