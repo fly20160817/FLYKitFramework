@@ -23,6 +23,7 @@
 #import <FLYKit/FLYQRCodeTools.h>
 #import <FLYKit/FLYBluetoothManager.h>
 #import <FLYKit/FLYBluetoothHandler.h>
+#import <FLYKit/FLYService.h>
 #import <FLYKit/CBPeripheral+FLYExtension.h>
 #import <FLYKit/FLYSoundTools.h>
 #import <FLYKit/FLYAudioPlayerManager.h>
