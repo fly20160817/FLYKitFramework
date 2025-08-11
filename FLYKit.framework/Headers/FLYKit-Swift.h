@@ -483,9 +483,11 @@ SWIFT_CLASS("_TtC6FLYKit12TimerManager")
 /// 初始化一个新的 <code>TimerManager</code> 实例
 /// \param interval 计时器的时间间隔，单位是秒。
 ///
+/// \param immediately 是否在启动计时器后立即执行一次。
+///
 /// \param action 计时器触发时执行的闭包。
 ///
-- (nonnull instancetype)initWithInterval:(NSTimeInterval)interval action:(void (^ _Nonnull)(void))action OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithInterval:(NSTimeInterval)interval immediately:(BOOL)immediately action:(void (^ _Nonnull)(void))action OBJC_DESIGNATED_INITIALIZER;
 /// 启动计时器
 - (void)startTimer;
 /// 暂停计时器
