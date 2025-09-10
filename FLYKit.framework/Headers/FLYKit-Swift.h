@@ -308,6 +308,36 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+@class NSString;
+@class UIFont;
+@class UIColor;
+@class NSCoder;
+SWIFT_CLASS("_TtC6FLYKit14ClickableLabel")
+@interface ClickableLabel : UILabel
+/// 初始化方法
+/// \param fullText 完整文本
+///
+/// \param clickableTexts 可点击文字数组
+///
+/// \param normalFont 普通文字字体
+///
+/// \param normalColor 普通文字颜色
+///
+/// \param linkFont 点击文字字体
+///
+/// \param linkColor 点击文字颜色
+///
+/// \param underline 点击文字是否显示下划线（默认 false）
+///
+/// \param underlineColor 下划线颜色（默认使用 linkColor）
+///
+/// \param tapAction 点击回调，返回点击文字和索引
+///
+- (nonnull instancetype)initWithFullText:(NSString * _Nonnull)fullText clickableTexts:(NSArray<NSString *> * _Nonnull)clickableTexts normalFont:(UIFont * _Nonnull)normalFont normalColor:(UIColor * _Nonnull)normalColor linkFont:(UIFont * _Nonnull)linkFont linkColor:(UIColor * _Nonnull)linkColor underline:(BOOL)underline underlineColor:(UIColor * _Nullable)underlineColor tapAction:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))tapAction OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
 SWIFT_CLASS("_TtC6FLYKit14FLYImagePicker")
 @interface FLYImagePicker : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) FLYImagePicker * _Nonnull shared;)
@@ -337,8 +367,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) FLYImagePick
 @end
 
 @class AVMetadataMachineReadableCodeObject;
-@class NSString;
-@class NSCoder;
 SWIFT_CLASS("_TtC6FLYKit15FLYScanCodeView")
 @interface FLYScanCodeView : UIView
 /// 扫描结果回调
