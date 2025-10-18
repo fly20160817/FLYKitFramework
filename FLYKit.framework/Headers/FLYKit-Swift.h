@@ -288,6 +288,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 #endif
 
+#import <FLYKit/FLYKit.h>
+
 #endif
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
@@ -419,7 +421,7 @@ SWIFT_PROTOCOL("_TtP6FLYKit26FLYWaterFlowLayoutDelegate_")
 
 @class NSBundle;
 SWIFT_CLASS("_TtC6FLYKit20FLYWebViewController")
-@interface FLYWebViewController : UIViewController
+@interface FLYWebViewController : FLYViewController
 @property (nonatomic, copy) NSString * _Nullable urlString;
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
