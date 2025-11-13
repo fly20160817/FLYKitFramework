@@ -5,60 +5,48 @@
 //  Created by fly on 2021/10/25.
 //
 
+
+/*
+ 
+ AES（对称加密）
+    • 特点：加密和解密使用同一个密钥。
+    • 优点：速度快、适合加密大量数据。
+    • 缺点：密钥需要安全传输，否则容易泄露。
+ 
+ 
+ 通常会使用 混合加密：
+    先用 AES 加密数据，
+    再用 RSA 公钥 加密 AES 密钥，
+    实现既能保证 数据传输安全，又能兼顾 加密解密速度。
+ 
+ 
+ AES 和 RSA 都是对二进制数据进行加密，输入和输出都是 Data 类型。
+ 加密方法接收的参数是 Data，可以先将字符串、字典或数组等转换为 Data 再加密。
+ 为了便于传输和存储，通常会用 Base64 将加密结果转成可读字符串。
+ 
+ */
+
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FLYAES : NSObject
 
-/***** 两个基础方法 *****
- 
- 1.加密可以加密任何东西，比如image、字符串、字典、等等类型，外界把需要加密的数据转换成data穿进来就行。
- 
- 2.解密之后返回的是data类型，外界拿到返回值后，可以转成自己想要的类型，比如image、字符串、字典、等等类型。
- 
- */
+/// AES加密
+/// @param data 需要加密的data (外界可以用 FLYDataConverter 把需要加密的数据转成 NSData)
+/// @param key 密钥(长度为16)
+/// @return 加密后的结果(原始为 NSData 类型)，这里会把它转成 Base64 编码的字符串
++ (NSString *)aes128EncryptData:(NSData *)data key:(NSString *)key;
 
-/// AES 加密data
-/// @param data 需要加密的data
-/// @param key 密钥
-+ (NSString *)aes128EncryptionWithData:(NSData *)data key:(NSString *)key;
-
-/// AES解密 （返回data）
-/// @param content 需要解密的字符串
-/// @param key 密钥
-+ (NSData *)aes128DecryptionReturnData:(NSString *)content key:(NSString *)key;
+/// AES解密
+/// @param content 需要解密的字符串 (Base64 编码的字符串)
+/// @param key 密钥(长度为16)
+/// @return 解密后的data（外界可以用 FLYDataConverter 把 Data 转换成想要的类型）
++ (NSData *)aes128DecryptString:(NSString *)content key:(NSString *)key;
 
 
-
-/***** 快捷方法 *****
- 
- 加密的数据不需要转data类型了，直接传进来，内部会自己转成data。
- 解密的数据也不需要外界转了，直接返回string类型
- 
- */
-
-/// AES 加密字符串
-/// @param content 需要加密的字符串
-/// @param key 密钥
-+ (NSString *)aes128EncryptionWithString:(NSString *)content key:(NSString *)key;
-
-/// AES 加密字典
-/// @param dic 需要加密的字典
-/// @param key 密钥
-+ (NSString *)aes128EncryptionWithDic:(NSDictionary *)dic key:(NSString *)key;
-
-/// AES 加密数组
-/// @param array 需要加密的数组
-/// @param key 密钥
-+ (NSString *)aes128EncryptionWithArray:(NSArray *)array key:(NSString *)key;
-
-
-/// AES解密 （返回字符串）
-/// @param content 需要解密的字符串
-/// @param key 密钥
-+ (NSString *)aes128DecryptionReturnString:(NSString *)content key:(NSString *)key;
-
+/// 随机生成一个 AES密钥（长度16）
++ (NSString *)randomAESKey;
 
 @end
 
