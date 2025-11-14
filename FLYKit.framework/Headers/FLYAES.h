@@ -34,13 +34,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// AES加密
 /// @param data 需要加密的data (外界可以用 FLYDataConverter 把需要加密的数据转成 NSData)
-/// @param key 密钥(长度为16)
+/// @param key 支持两种方式：
+///              1.长度为16的字符串
+///              2.Base64编码的16字节二进制密钥(后台随机生成16字节二进制密钥，再把二进制密钥Base64编码后传给我)
 /// @return 加密后的结果(原始为 NSData 类型)，这里会把它转成 Base64 编码的字符串
 + (NSString *)aes128EncryptData:(NSData *)data key:(NSString *)key;
 
 /// AES解密
 /// @param content 需要解密的字符串 (Base64 编码的字符串)
-/// @param key 密钥(长度为16)
+/// @param key 支持两种方式：
+///              1.长度为16的字符串
+///              2.Base64编码的16字节二进制密钥(后台随机生成16字节二进制密钥，再把二进制密钥Base64编码后传给我)
 /// @return 解密后的data（外界可以用 FLYDataConverter 把 Data 转换成想要的类型）
 + (NSData *)aes128DecryptString:(NSString *)content key:(NSString *)key;
 
