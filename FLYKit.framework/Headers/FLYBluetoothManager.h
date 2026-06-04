@@ -77,6 +77,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 通知状态发生变化时回调 */
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error;
 
+/** 外设已准备好继续无响应写入 */
+- (void)peripheralIsReadyToSendWriteWithoutResponse:(CBPeripheral *)peripheral;
+
 @end
 
 
