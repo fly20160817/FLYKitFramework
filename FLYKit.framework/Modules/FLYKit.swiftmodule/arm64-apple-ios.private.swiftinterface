@@ -1,0 +1,227 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.3 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 6 -Onone -enable-experimental-feature DebugDescriptionMacro -module-name FLYKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import AVFoundation
+import CoreData
+@_exported import FLYKit
+import Foundation
+import Kingfisher
+import PhotosUI
+import Swift
+import UIKit
+import UniformTypeIdentifiers
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class ImageBrowserView : UIKit.UIView {
+  @objc @_Concurrency.MainActor @preconcurrency public var imageDatas: [Any]
+  @objc @_Concurrency.MainActor @preconcurrency public var index: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency convenience public init(frame: CoreFoundation.CGRect, imageDatas: [Any], index: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+extension FLYKit.ImageBrowserView : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor @preconcurrency open class FLYWebViewController : FLYKit.FLYViewController {
+  @objc @_Concurrency.MainActor @preconcurrency open var urlString: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @objcMembers open class FLYScanCodeView : UIKit.UIView {
+  @objc @_Concurrency.MainActor open var scanResult: ((_ resultObjects: [AVFoundation.AVMetadataMachineReadableCodeObject], _ resultStrings: [Swift.String]) -> Swift.Void)?
+  @_Concurrency.MainActor open var rectOfInterest: CoreFoundation.CGRect? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension FLYKit.FLYScanCodeView : @preconcurrency AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @_Concurrency.MainActor @objc dynamic public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+}
+extension FLYKit.FLYScanCodeView {
+  @objc @_Concurrency.MainActor dynamic public func loadUI()
+  @objc @_Concurrency.MainActor dynamic public func startRunning()
+  @objc @_Concurrency.MainActor dynamic public func stopRunning()
+}
+@objc public enum LogLevel : Swift.Int {
+  case debug = 0
+  case info
+  case warning
+  case error
+  case critical
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers open class Logger : ObjectiveC.NSObject {
+  @objc nonisolated(unsafe) public static var logLevel: FLYKit.LogLevel
+  @objc nonisolated(unsafe) public static var isLogFileEnabled: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension FLYKit.Logger {
+  public class func log(_ items: Any..., level: FLYKit.LogLevel = .info, separator: Swift.String = " ", terminator: Swift.String = "\n", file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
+  @objc dynamic public class func getLogFilePath() -> Swift.String
+  @objc dynamic public class func deleteLogFile()
+}
+@objc @objcMembers open class TimerManager : ObjectiveC.NSObject {
+  @objc public init(interval: Foundation.TimeInterval, immediately: Swift.Bool = false, action: @escaping () -> Swift.Void)
+  @objc deinit
+  @objc open func startTimer()
+  @objc open func pauseTimer()
+}
+@objc @objcMembers @_Concurrency.MainActor @preconcurrency public class ProgressImageView : UIKit.UIImageView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @objc @_Concurrency.MainActor @preconcurrency public func setupImage(imageUrl: Foundation.URL, completionHandler: ((UIKit.UIImage?) -> ())? = nil)
+  @objc deinit
+}
+@objc public protocol FLYWaterFlowLayoutDelegate {
+  @objc func waterFlowLayout(_ layout: FLYKit.FLYWaterFlowLayout, heightForItemAt indexPath: Foundation.IndexPath, itemWidth width: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class FLYWaterFlowLayout : UIKit.UICollectionViewLayout {
+  @objc @_Concurrency.MainActor @preconcurrency public var delegate: (any FLYKit.FLYWaterFlowLayoutDelegate)?
+  @objc @_Concurrency.MainActor @preconcurrency public var columnCount: Swift.Int
+  @objc @_Concurrency.MainActor @preconcurrency public var columnSpacing: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency public var rowSpacing: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency public var edgeInsets: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func prepare()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutAttributesForElements(in rect: CoreFoundation.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutAttributesForItem(at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var collectionViewContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class ImageZoomView : UIKit.UIScrollView {
+  @objc @_Concurrency.MainActor @preconcurrency public var image: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var imageUrl: Foundation.URL? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public let minZoomScale: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency final public let maxZoomScale: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension FLYKit.ImageZoomView : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
+}
+extension FLYKit.ImageZoomView {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func restoreZoom()
+}
+extension UIKit.UIDevice {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open var deviceModel: Swift.String {
+    @objc get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @objcMembers public class FLYImagePicker : ObjectiveC.NSObject {
+  @objc @_Concurrency.MainActor public static let shared: FLYKit.FLYImagePicker
+  @_Concurrency.MainActor @objc override dynamic public init()
+  @objc deinit
+}
+extension FLYKit.FLYImagePicker {
+  @objc @_Concurrency.MainActor dynamic public func imagePicker(sourceType: UIKit.UIImagePickerController.SourceType, finishPickingBlock: @escaping ([UIKit.UIImage]) -> Swift.Void)
+  @available(iOS 14, *)
+  @objc @_Concurrency.MainActor dynamic public func imagePicker(selectionLimit: Swift.Int, finishPickingBlock: @escaping ([UIKit.UIImage]) -> Swift.Void)
+}
+extension FLYKit.FLYImagePicker : UIKit.UIImagePickerControllerDelegate, UIKit.UINavigationControllerDelegate, PhotosUI.PHPickerViewControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+  @available(iOS 14, *)
+  @_Concurrency.MainActor @preconcurrency public func picker(_ picker: PhotosUI.PHPickerViewController, didFinishPicking results: [PhotosUI.PHPickerResult])
+}
+@_Concurrency.MainActor public var SCREEN_WIDTH: CoreFoundation.CGFloat {
+  get
+}
+@_Concurrency.MainActor public var SCREEN_HEIGHT: CoreFoundation.CGFloat {
+  get
+}
+@_Concurrency.MainActor public var STATUSBAR_HEIGHT: CoreFoundation.CGFloat {
+  get
+}
+@_Concurrency.MainActor public var NAVBAR_HEIGHT: CoreFoundation.CGFloat {
+  get
+}
+@_Concurrency.MainActor public var STATUSADDNAV_HEIGHT: CoreFoundation.CGFloat {
+  get
+}
+@_Concurrency.MainActor public var TABBER_HEIGHT: CoreFoundation.CGFloat {
+  get
+}
+public let SAFE_BOTTOM: CoreFoundation.CGFloat
+public func printf(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n", file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
+@discardableResult
+public func delay(_ seconds: Swift.Double, _ block: @escaping () -> Swift.Void) -> Dispatch.DispatchWorkItem
+public func RBGColor(r: Swift.Int, g: Swift.Int, b: Swift.Int, a: CoreFoundation.CGFloat) -> UIKit.UIColor
+public func RBGColor_ARC4() -> UIKit.UIColor
+public func imageName(_ name: Swift.String?) -> UIKit.UIImage?
+public func colorHex(_ hex: Swift.String) -> UIKit.UIColor
+public let appName: Swift.String
+public let appBundleId: Swift.String
+public let appVersion: Swift.String
+public let appBuild: Swift.String
+@_Concurrency.MainActor public var deviceName: Swift.String {
+  get
+}
+@_Concurrency.MainActor public var deviceModel: Swift.String {
+  get
+}
+@_Concurrency.MainActor public var deviceVersion: Swift.String {
+  get
+}
+public func FONT_R(_ size: CoreFoundation.CGFloat) -> UIKit.UIFont
+public func FONT_M(_ size: CoreFoundation.CGFloat) -> UIKit.UIFont
+public func FONT_S(_ size: CoreFoundation.CGFloat) -> UIKit.UIFont
+public func FONT_L(_ size: CoreFoundation.CGFloat) -> UIKit.UIFont
+public func FONT_U(_ size: CoreFoundation.CGFloat) -> UIKit.UIFont
+public func FONT_T(_ size: CoreFoundation.CGFloat) -> UIKit.UIFont
+public func LS(_ key: Swift.String) -> Swift.String
+public func LS(_ key: Swift.String, _ args: any Swift.CVarArg...) -> Swift.String
+@objc @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class ClickableLabel : UIKit.UILabel {
+  @objc @_Concurrency.MainActor @preconcurrency public init(fullText: Swift.String, clickableTexts: [Swift.String], normalFont: UIKit.UIFont, normalColor: UIKit.UIColor, linkFont: UIKit.UIFont, linkColor: UIKit.UIColor, underline: Swift.Bool = false, underlineColor: UIKit.UIColor? = nil, tapAction: @escaping (Swift.Int, Swift.String) -> Swift.Void)
+  @objc deinit
+}
+public protocol Persistence : Swift.Decodable, Swift.Encodable {
+  var identity: Swift.String { get }
+}
+@_hasMissingDesignatedInitializers public class ModelPersistenceManager {
+  public static func getModelsForClass<T>(_ modelClass: T.Type) -> [T] where T : FLYKit.Persistence
+  public static func getModel<T>(_ modelClass: T.Type, forIdentity identity: Swift.String) -> T? where T : FLYKit.Persistence
+  public static func saveModel<T>(_ model: T) where T : FLYKit.Persistence
+  public static func updateModel<T>(_ model: T) where T : FLYKit.Persistence
+  public static func deleteModel<T>(_ model: T) where T : FLYKit.Persistence
+  public static func deleteModels<T>(_ modelsToDelete: [T], forClass modelClass: T.Type) where T : FLYKit.Persistence
+  public static func deleteAllModels<T>(forClass modelClass: T.Type) where T : FLYKit.Persistence
+  public static func deleteAllModels()
+  @objc deinit
+}
+extension FLYKit.LogLevel : Swift.Equatable {}
+extension FLYKit.LogLevel : Swift.Hashable {}
+extension FLYKit.LogLevel : Swift.RawRepresentable {}
+extension FLYKit.FLYImagePicker : Swift.Sendable {}
